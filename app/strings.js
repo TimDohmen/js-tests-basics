@@ -10,6 +10,6 @@ function concat(str1, str2, seperator = " ") {
 
 // Write a function that will capitalize the l  etter at a given position and return it
 function capitalizer(str, position) {
-
+  return str.charAt(position).toUpperCase(0);
 
 }
