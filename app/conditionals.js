@@ -2,7 +2,9 @@
 
 function largerNum(num1, num2) {
     // you code here
-
+    if (num1 > num2) {
+        return num1
+    } return num2
 }
 
 // 2. Given two numbers, amount correct and amount possible of a test, return the corresponding letter grade.
@@ -14,8 +16,22 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
+    if (score / possible >= .9) {
+        return "a"
+    } else if (score / possbile >= .8) {
+        return "b"
+    } else if (score / possible >= .7) {
+        return "c"
+    } else if (score / possbile >= .6) {
+        return "d"
+    } else {
+        return "f"
+    }
+
 
 }
+
+
 
 
 // --------------------------------------------
@@ -30,6 +46,14 @@ function testGrader(score, possible) {
 
 function timeOfDayGreeting(hour) {
     // you code below
+    if (5 <= hour <= 11) {
+        return "good morning"
+    } else if (12 < hour < 17) {
+        return "good afternoon"
+    } else if (18 < hour < 21) {
+        return "good evening"
+    } else
+        return ("good night")
 
 }
 
