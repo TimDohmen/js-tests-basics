@@ -17,19 +17,18 @@ function largerNum(num1, num2) {
 
 function testGrader(score, possible) {
     if (score / possible >= .9) {
-        return "a"
+        return "a".toUpperCase()
     } else if (score / possbile >= .8) {
-        return "b"
+        return "b".toUpperCase()
     } else if (score / possible >= .7) {
-        return "c"
+        return "c".toUpperCase()
     } else if (score / possbile >= .6) {
-        return "d"
+        return "d".toUpperCase()
     } else {
-        return "f"
+        return "f".toUpperCase()
     }
-
-
 }
+
 
 
 
@@ -46,20 +45,27 @@ function testGrader(score, possible) {
 
 function timeOfDayGreeting(hour) {
     // you code below
-    if (5 <= hour <= 11) {
+    if (5 <= hour && hour <= 11) {
         return "good morning"
-    } else if (12 < hour < 17) {
+    } else if (12 <= hour && hour <= 17) {
         return "good afternoon"
-    } else if (18 < hour < 21) {
+    } else if (18 <= hour && hour <= 21) {
         return "good evening"
-    } else
-        return ("good night")
+    } else if (22 <= hour && hour <= 24) {
+        return "good night"
+    } else {
+        return "good night"
+    }
 
 }
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
-
+    if (temp >= 103) {
+        return "fever go to hospital"
+    } else if (temp > 98.6) {
+        return "fever"
+    } return "no fever"
 }
 
 //5. Write a function that takes in a car object, if it is not moving then return true
@@ -71,6 +77,9 @@ let myCar = {
 }
 
 function isStopped(car) {
+    if (car.moving) {
+        return false
+    } return true
 
 }
 
@@ -82,5 +91,7 @@ let dish = {
 }
 
 function washDish(dish) {
-
+    if (dish.yourDish && dish.isDirty) {
+        return true
+    } return false
 }
